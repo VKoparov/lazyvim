@@ -29,12 +29,6 @@ return {
     },
   },
   {
-    "akinsho/bufferline.nvim",
-    opts = {
-      highlights = require("catppuccin.groups.integrations.bufferline").get(),
-    },
-  },
-  {
     "LazyVim/LazyVim",
     -- opts via function to manually merge fields with defaults
     opts = function(_, opts)

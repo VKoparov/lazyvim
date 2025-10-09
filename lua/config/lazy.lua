@@ -14,6 +14,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- This clear the warning about lazy imports ordering!
+vim.g.lazyvim_check_order = false
+
 require("lazy").setup({
   spec = {
     -- add LazyVim and import its plugins
