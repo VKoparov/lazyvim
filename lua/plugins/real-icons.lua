@@ -1,5 +1,9 @@
 return {
   "Mirsmog/real-icons.nvim",
+  -- Neovide can inherit terminal variables when launched from Ghostty.
+  cond = function()
+    return not vim.g.neovide
+  end,
   opts = {
     pack = "flow-deep",
     packs = {
