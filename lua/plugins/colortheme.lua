@@ -1,8 +1,22 @@
+-- Choose the startup theme: rose-pine-moon, catppuccin, gruvbox, or tokyonight.
+local colorscheme = "rose-pine"
+
 return {
+  {
+    "LazyVim/LazyVim",
+    opts = { colorscheme = colorscheme },
+  },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    lazy = true,
+    opts = {
+      styles = { transparency = not vim.g.neovide },
+    },
+  },
   {
     "catppuccin/nvim",
     name = "catppuccin",
-    -- opts via object to override default fields and keep others
     opts = {
       flavour = "mocha",
       transparent_background = true,
@@ -19,7 +33,6 @@ return {
           enabled = true,
         },
         lsp_trouble = true,
-        -- mini = true, -- breaks colored | indentation thingy
         navic = {
           enabled = true,
           custom_bg = "NONE",
@@ -29,10 +42,17 @@ return {
     },
   },
   {
-    "LazyVim/LazyVim",
-    -- opts via function to manually merge fields with defaults
-    opts = function(_, opts)
-      opts.colorscheme = "catppuccin"
-    end,
+    "ellisonleao/gruvbox.nvim",
+    lazy = true,
+  },
+  {
+    "folke/tokyonight.nvim",
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+    },
   },
 }
