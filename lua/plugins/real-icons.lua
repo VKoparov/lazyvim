@@ -9,7 +9,7 @@ return {
     packs = {
       ["flow-deep"] = {
         type = "vscode",
-        path = vim.fn.stdpath("data") .. "/real-icons/packs/flow-deep",
+        path = vim.fn.stdpath("config") .. "/assets/flow-deep",
         manifest = "deep-png.json",
       },
     },
